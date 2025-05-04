@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Grid = require("gridfs-stream");
 
 const mongoURI =
-  "mongodb+srv://rupeshdevasam:Welcome123@cluster0.wt1he.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  "mongodb+srv://yerramsettibindusai19:Bindu123@cluster0.xjrefhi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const conn = mongoose.createConnection(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

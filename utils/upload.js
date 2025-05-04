@@ -3,7 +3,7 @@ const { GridFsStorage } = require("multer-gridfs-storage");
 
 // Create storage engine
 function upload() {
-  const mongodbUrl = `mongodb+srv://rupeshdevasam:Welcome123@cluster0.wt1he.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+  const mongodbUrl = `mongodb+srv://yerramsettibindusai19:Bindu123@cluster0.xjrefhi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
   const storage = new GridFsStorage({
     url: mongodbUrl,
     file: (req, file) => {

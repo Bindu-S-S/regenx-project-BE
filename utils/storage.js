@@ -4,7 +4,7 @@ const path = require("path");
 const { conn, gfs } = require("../utils/filedb");
 
 const storage = new GridFsStorage({
-  url: "mongodb+srv://rupeshdevasam:Welcome123@cluster0.wt1he.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  url: "mongodb+srv://yerramsettibindusai19:Bindu123@cluster0.xjrefhi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
   file: (req, file) => {
     try {
       // you can customize filename here
