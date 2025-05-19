@@ -6,23 +6,25 @@ const auth = async (req, res, next) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
 
-  const tok = token.split(" ")[1];
+  // Add validation for token format
+  const tokenParts = token.split(" ");
+  if (tokenParts.length < 2) {
+    return res.status(401).json({ message: "Invalid token format" });
+  }
+  
+  const tok = tokenParts[1];
+  
   try {
     const user = await User.find({ token: tok });
-    if (!user) {
+    if (!user || user.length === 0) {  // Fixed: check array length
       return res.status(404).json({ message: "User not found" });
     }
     req.user = user[0];
+    next();  // Move next() inside try block
   } catch (error) {
+    console.error("Auth error:", error);  // Add logging
     return res.status(500).json({ message: "Internal server error" });
   }
-  // req.user = {
-  //   _id: "1234567890",
-  // };
-  // Verify the token here (e.g., using JWT)
-  // If valid, call next()
-  // If invalid, return an error response
-  next();
 };
 
 module.exports = { auth };
