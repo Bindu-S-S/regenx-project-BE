@@ -7,29 +7,7 @@ const mongodb = require("mongodb");
 
 class FileController {
   bucket;
-  constructor() {
-    // this.bucket = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
-    //   bucketName: "filesBucket",
-    // });
-    // (() => {
-    // })();
-    // mongoose
-    //   .connect(
-    //     "mongodb+srv://rupeshdevasam:Welcome123@cluster0.wt1he.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-    //   )
-    //   .then(() => {
-    //     console.log("connected to MongoDB database successfully");
-    //   })
-    //   .catch(() => {
-    //     console.log(
-    //       "error occurred while connecting to MongoDB database in the example file"
-    //     );
-    //   });
-    // // let bucket = new mongoose.mongo.GridFSBucket(mongoose.connection.db);
-    // this.bucket = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
-    //   bucketName: "uploads",
-    // });
-  }
+  constructor() {}
   async uploadFile(req, res, next) {
     try {
       const { file } = req;

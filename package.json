@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node dist/final.js",
+    "build": "webpack"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
@@ -21,5 +22,9 @@
     "morgan": "~1.9.1",
     "multer-gridfs-storage": "^5.0.2",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1"
   }
 }
